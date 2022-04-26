@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D31637CA-8A67-4D7F-866F-B6A95DD62D27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AdministradorSupervisor.My.MyApplication</StartupObject>
+    <RootNamespace>AdministradorSupervisor</RootNamespace>
+    <AssemblyName>AdministradorSupervisor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\192.168.1.14\Programas CRM\Aplicativos\AdministradorSupervisor\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\192.168.1.14\Programas CRM\Aplicativos\AdministradorSupervisor\</InstallUrl>
+    <ApplicationRevision>26</ApplicationRevision>
+    <ApplicationVersion>1.3.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AdministradorSupervisor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AdministradorSupervisor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>041BBD86D4187CBAE71907B63EAD6121D04C5834</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AdministradorSupervisor_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DA\clsGrabaciones.vb" />
+    <Compile Include="Entidades\clsBitacora.vb" />
+    <Compile Include="Entidades\clsEjecutivo.vb" />
+    <Compile Include="Entidades\IDList.vb" />
+    <Compile Include="Formularios\frmBuscarRut.Designer.vb">
+      <DependentUpon>frmBuscarRut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmBuscarRut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ejecutivos.Designer.vb">
+      <DependentUpon>Ejecutivos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ejecutivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormAdministracionRegistros.Designer.vb">
+      <DependentUpon>FormAdministracionRegistros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormAdministracionRegistros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormCampaña.Designer.vb">
+      <DependentUpon>FormCampaña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormCampaña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormIngresarDatos.Designer.vb">
+      <DependentUpon>FormIngresarDatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormIngresarDatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormMenu.Designer.vb">
+      <DependentUpon>FormMenu.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCargaReferido.Designer.vb">
+      <DependentUpon>frmCargaReferido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCargaReferido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmHistorialLlamado.Designer.vb">
+      <DependentUpon>frmHistorialLlamado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmHistorialLlamado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmLiberaTerminados.designer.vb">
+      <DependentUpon>FrmLiberaTerminados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmLiberaTerminados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\LiberacionRegistros.Designer.vb">
+      <DependentUpon>LiberacionRegistros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\LiberacionRegistros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLiberacionBloqueados.Designer.vb">
+      <DependentUpon>frmLiberacionBloqueados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLiberacionBloqueados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloGeneral.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Formularios\Proximamente.Designer.vb">
+      <DependentUpon>Proximamente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Proximamente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\frmBuscarRut.resx">
+      <DependentUpon>frmBuscarRut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ejecutivos.resx">
+      <DependentUpon>Ejecutivos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormAdministracionRegistros.resx">
+      <DependentUpon>FormAdministracionRegistros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormCampaña.resx">
+      <DependentUpon>FormCampaña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormIngresarDatos.resx">
+      <DependentUpon>FormIngresarDatos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormMenu.resx">
+      <DependentUpon>FormMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCargaReferido.resx">
+      <DependentUpon>frmCargaReferido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmHistorialLlamado.resx">
+      <DependentUpon>frmHistorialLlamado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmLiberaTerminados.resx">
+      <DependentUpon>FrmLiberaTerminados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLiberacionBloqueados.resx">
+      <DependentUpon>frmLiberacionBloqueados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\LiberacionRegistros.resx">
+      <DependentUpon>LiberacionRegistros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Proximamente.resx">
+      <DependentUpon>Proximamente.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AdministradorSupervisor_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asociar.png" />
+    <Content Include="Resources\cordial.jpeg" />
+    <Content Include="Resources\ejecutivos.png" />
+    <None Include="Resources\volver 2.png" />
+    <None Include="Resources\volver 1.png" />
+    <None Include="Resources\salir v2.jpg" />
+    <None Include="Resources\proximamente 1.png" />
+    <None Include="Resources\LOGO-CORDIAL-2019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

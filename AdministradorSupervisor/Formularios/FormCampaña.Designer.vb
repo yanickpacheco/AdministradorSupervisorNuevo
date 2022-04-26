@@ -1,0 +1,168 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FormCampaña
+    Inherits System.Windows.Forms.Form
+
+    'Form reemplaza a Dispose para limpiar la lista de componentes.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Requerido por el Diseñador de Windows Forms
+    Private components As System.ComponentModel.IContainer
+
+    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+    'Se puede modificar usando el Diseñador de Windows Forms.  
+    'No lo modifique con el editor de código.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormCampaña))
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblClaveInvalida = New System.Windows.Forms.Label()
+        Me.txtClave = New System.Windows.Forms.TextBox()
+        Me.lblUsuarioTelefonia = New System.Windows.Forms.Label()
+        Me.lblNombreUsuario = New System.Windows.Forms.Label()
+        Me.cmbUsuario = New System.Windows.Forms.ComboBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Image = Global.AdministradorSupervisor.My.Resources.Resources.LOGO_CORDIAL_2019
+        Me.PictureBox1.Location = New System.Drawing.Point(64, 26)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(321, 204)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'btnIngresar
+        '
+        Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.Location = New System.Drawing.Point(169, 419)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(124, 50)
+        Me.btnIngresar.TabIndex = 3
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(394, 406)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(76, 74)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Salir"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'lblClaveInvalida
+        '
+        Me.lblClaveInvalida.BackColor = System.Drawing.Color.Transparent
+        Me.lblClaveInvalida.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblClaveInvalida.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblClaveInvalida.ForeColor = System.Drawing.Color.OrangeRed
+        Me.lblClaveInvalida.Location = New System.Drawing.Point(36, 365)
+        Me.lblClaveInvalida.Name = "lblClaveInvalida"
+        Me.lblClaveInvalida.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblClaveInvalida.Size = New System.Drawing.Size(222, 22)
+        Me.lblClaveInvalida.TabIndex = 48
+        Me.lblClaveInvalida.Text = "(*) La contraseña no es valida"
+        Me.lblClaveInvalida.Visible = False
+        '
+        'txtClave
+        '
+        Me.txtClave.AcceptsReturn = True
+        Me.txtClave.BackColor = System.Drawing.Color.Lavender
+        Me.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtClave.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtClave.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtClave.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtClave.ForeColor = System.Drawing.Color.Silver
+        Me.txtClave.Location = New System.Drawing.Point(40, 335)
+        Me.txtClave.MaxLength = 0
+        Me.txtClave.Name = "txtClave"
+        Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtClave.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtClave.Size = New System.Drawing.Size(366, 22)
+        Me.txtClave.TabIndex = 46
+        '
+        'lblUsuarioTelefonia
+        '
+        Me.lblUsuarioTelefonia.BackColor = System.Drawing.Color.Transparent
+        Me.lblUsuarioTelefonia.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblUsuarioTelefonia.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsuarioTelefonia.ForeColor = System.Drawing.Color.Black
+        Me.lblUsuarioTelefonia.Location = New System.Drawing.Point(36, 310)
+        Me.lblUsuarioTelefonia.Name = "lblUsuarioTelefonia"
+        Me.lblUsuarioTelefonia.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblUsuarioTelefonia.Size = New System.Drawing.Size(146, 22)
+        Me.lblUsuarioTelefonia.TabIndex = 47
+        Me.lblUsuarioTelefonia.Text = "Clave"
+        '
+        'lblNombreUsuario
+        '
+        Me.lblNombreUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.lblNombreUsuario.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblNombreUsuario.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombreUsuario.ForeColor = System.Drawing.Color.Black
+        Me.lblNombreUsuario.Location = New System.Drawing.Point(36, 245)
+        Me.lblNombreUsuario.Name = "lblNombreUsuario"
+        Me.lblNombreUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblNombreUsuario.Size = New System.Drawing.Size(146, 22)
+        Me.lblNombreUsuario.TabIndex = 45
+        Me.lblNombreUsuario.Text = "Usuario"
+        '
+        'cmbUsuario
+        '
+        Me.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbUsuario.FormattingEnabled = True
+        Me.cmbUsuario.Location = New System.Drawing.Point(40, 270)
+        Me.cmbUsuario.Name = "cmbUsuario"
+        Me.cmbUsuario.Size = New System.Drawing.Size(366, 24)
+        Me.cmbUsuario.TabIndex = 44
+        '
+        'FormCampaña
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(482, 492)
+        Me.Controls.Add(Me.lblClaveInvalida)
+        Me.Controls.Add(Me.txtClave)
+        Me.Controls.Add(Me.lblUsuarioTelefonia)
+        Me.Controls.Add(Me.lblNombreUsuario)
+        Me.Controls.Add(Me.cmbUsuario)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnIngresar)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Name = "FormCampaña"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "FormCampaña"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnIngresar As Button
+    Friend WithEvents Button1 As Button
+    Public WithEvents lblClaveInvalida As Label
+    Public WithEvents txtClave As TextBox
+    Public WithEvents lblUsuarioTelefonia As Label
+    Public WithEvents lblNombreUsuario As Label
+    Friend WithEvents cmbUsuario As ComboBox
+End Class
