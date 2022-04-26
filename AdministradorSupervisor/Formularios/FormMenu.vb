@@ -10,7 +10,7 @@ Public Class FormMenu
 
 
         Select Case nombreSupervisor
-            Case "PABLO CASTILLO", "MAURICIO GOMEZ", "SUSANA COLLAO", "YANETT MUÑOZ", "CLAUDIA LOZANO", "MATIAS CARRERA", "JOSE GOHURDETT", "PAULA ARAOS"
+            Case "PABLO CASTILLO", "MAURICIO GOMEZ", "SUSANA COLLAO", "YANETT MUÑOZ", "CLAUDIA LOZANO", "MATIAS CARRERA", "JOSE GOHURDETT", "PAULA ARAOS", "ANA RODRIGUEZ", "CRISTIAN ANACONA", "DAMARIS MARIN"
                 btnReferidos.Visible = True
             Case Else
                 btnReferidos.Visible = False
