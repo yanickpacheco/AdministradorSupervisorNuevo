@@ -541,7 +541,7 @@ Public Class LiberacionRegistros
         End If
 
 
-        LiberarAgendados(ejecutivo, strIDs, opcion, IIf(chkSinIntentos.Checked = True, 1, 0), IIf(chkObservaciones.Checked = True, 1, 0), IIf(rdbLiberarOtroEjecutivo.Checked = True, cmbOtroEjecutivo.Text, ""))
+        LiberarAgendados(ejecutivo, strIDs, opcion, IIf(chkSinIntentos.Checked = True, 1, 0), IIf(chkObservaciones.Checked = True, 1, 0), IIf(rdbLiberarOtroEjecutivo.Checked = True, cmbOtroEjecutivo.Text, ""), cmbFlujoContacto.Text)
         limpiaControles()
         'dtgAgendados.DataSource = Nothing
         ListaAgendados()
@@ -550,7 +550,7 @@ Public Class LiberacionRegistros
     End Sub
 
 
-    Private Sub LiberarAgendados(ByVal ejecutivo As String, ByVal strIDs As String, ByVal opcion As Integer, ByVal intentos As Integer, ByVal observaciones As Integer, ByVal otroEjecutivo As String)
+    Private Sub LiberarAgendados(ByVal ejecutivo As String, ByVal strIDs As String, ByVal opcion As Integer, ByVal intentos As Integer, ByVal observaciones As Integer, ByVal otroEjecutivo As String, ByVal flujo As String)
         Dim tabla As New DataTable
         Dim da As SqlDataAdapter
         Dim cmd As New SqlCommand
@@ -576,6 +576,7 @@ Public Class LiberacionRegistros
             cmd.Parameters.AddWithValue("@intentos", intentos)
             cmd.Parameters.AddWithValue("@observaciones", observaciones)
             cmd.Parameters.AddWithValue("@otroEjecutivo", otroEjecutivo)
+            cmd.Parameters.AddWithValue("@flujo", flujo)
 
 
             cnn.Open()
@@ -589,7 +590,7 @@ Public Class LiberacionRegistros
 
             MsgBox("Registros liberados")
 
-            Especificacion = "Liberacion Agendados:  Ejecutivo: " & ejecutivo & ", Otro Ejecutivo: " & otroEjecutivo  & ", Ids: " & strIDs & ""
+            Especificacion = "Liberacion Agendados:  Ejecutivo: " & ejecutivo & ", Otro Ejecutivo: " & otroEjecutivo & ", Ids: " & strIDs & ""
 
             Bitacora.IdCRM = idCrm
             Bitacora.Detalle = Especificacion
