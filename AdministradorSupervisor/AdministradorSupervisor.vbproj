@@ -27,7 +27,11 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.1.14\Programas CRM\Aplicativos\AdministradorSupervisor\</InstallUrl>
+<<<<<<< HEAD
     <ApplicationRevision>31</ApplicationRevision>
+=======
+    <ApplicationRevision>30</ApplicationRevision>
+>>>>>>> c043d5b4b4bd9660301a0c334ef451a151115240
     <ApplicationVersion>1.3.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
