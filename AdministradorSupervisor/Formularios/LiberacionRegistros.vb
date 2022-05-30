@@ -288,7 +288,7 @@ Public Class LiberacionRegistros
         listaEjecutivos(cmbEjecutivoAgenda)
 
         Select Case nombreSupervisor
-            Case "PABLO CASTILLO", "MAURICIO GOMEZ", "SUSANA COLLAO", "YANETT MUÑOZ", "PAULA ARAOS", "DYLAN RODRIGUEZ", "EDINSSON MALDONADO", "ANA RODRIGUEZ", "CRISTIAN ANACONA", "DAMARIS MARIN"
+            Case "PABLO CASTILLO", "MAURICIO GOMEZ", "SUSANA COLLAO", "YANETT MUÑOZ", "PAULA ARAOS", "DYLAN RODRIGUEZ", "EDINSSON MALDONADO", "ANA RODRIGUEZ", "CRISTIAN ANACONA", "DAMARIS MARIN", "ROSSINI VALDIVIA", "FELIPE DIAZ"
                 rdbPorEjecutivo.Visible = True
             Case Else
                 rdbPorEjecutivo.Visible = False

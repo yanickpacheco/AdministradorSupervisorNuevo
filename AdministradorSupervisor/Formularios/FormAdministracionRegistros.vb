@@ -23,10 +23,10 @@ Public Class FormAdministracionRegistros
 
     Private Sub FormAdministracionRegistros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Select Case nombreSupervisor
-            Case "PABLO CASTILLO", "MAURICIO GOMEZ", "SUSANA COLLAO", "YANETT MUÑOZ", "MATIAS CARRERA", "PAULA ARAOS", "ANA RODRIGUEZ", "CRISTIAN ANACONA", "DAMARIS MARIN"
+            Case "PABLO CASTILLO", "MAURICIO GOMEZ", "SUSANA COLLAO", "YANETT MUÑOZ", "MATIAS CARRERA", "PAULA ARAOS", "ANA RODRIGUEZ", "CRISTIAN ANACONA", "DAMARIS MARIN", "ROSSINI VALDIVIA", "FELIPE DIAZ"
                 btnRecicladoBase.Visible = True
                 btnLiberarBloqueados.Visible = True
-                If nombreSupervisor = "YANETT MUÑOZ" Or nombreSupervisor = "PAULA ARAOS" Then
+                If nombreSupervisor = "YANETT MUÑOZ" Or nombreSupervisor = "PAULA ARAOS" Or nombreSupervisor = "ROSSINI VALDIVIA" Then
                     btnMandato.Visible = True
                 End If
             Case Else
