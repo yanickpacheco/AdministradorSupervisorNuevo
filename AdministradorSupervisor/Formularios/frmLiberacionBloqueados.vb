@@ -5,6 +5,7 @@ Public Class frmLiberacionBloqueados
     Dim cnn As New SqlConnection("data source = 192.168.1.14; initial catalog = BASE_GENERAL_CORDIAL; User id= cp; password=Cordial.passs")
 
 
+
     Private Sub frmLiberacionBloqueados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListaTipoBloqueo(cmbTipoBloqueo)
         LimpiaControles()
@@ -25,6 +26,7 @@ Public Class frmLiberacionBloqueados
         Dim miTabla As New DataTable
         Dim dA As SqlDataAdapter
         Dim cmd As New SqlCommand
+        cmd.CommandTimeout = 300
         Dim sql As String = ""
         cmd.CommandType = CommandType.StoredProcedure
         Try
