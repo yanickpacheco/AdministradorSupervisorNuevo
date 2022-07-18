@@ -107,6 +107,12 @@
     <Compile Include="Entidades\clsBitacora.vb" />
     <Compile Include="Entidades\clsEjecutivo.vb" />
     <Compile Include="Entidades\IDList.vb" />
+    <Compile Include="Formularios\FormDescargarBase.Designer.vb">
+      <DependentUpon>FormDescargarBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormDescargarBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\frmBuscarRut.Designer.vb">
       <DependentUpon>frmBuscarRut.vb</DependentUpon>
     </Compile>
@@ -199,6 +205,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FormDescargarBase.resx">
+      <DependentUpon>FormDescargarBase.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmBuscarRut.resx">
       <DependentUpon>frmBuscarRut.vb</DependentUpon>
     </EmbeddedResource>

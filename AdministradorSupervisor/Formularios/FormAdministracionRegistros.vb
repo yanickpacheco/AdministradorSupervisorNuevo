@@ -58,4 +58,9 @@ Public Class FormAdministracionRegistros
 
         End Try
     End Sub
+
+    Private Sub btnMuestraBase_Click(sender As Object, e As EventArgs) Handles btnMuestraBase.Click
+        FormDescargarBase.Show()
+
+    End Sub
 End Class
