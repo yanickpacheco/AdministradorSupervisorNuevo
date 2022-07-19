@@ -42,7 +42,7 @@ Partial Class FormAdministracionRegistros
         Me.btnMuestraBase.Name = "btnMuestraBase"
         Me.btnMuestraBase.Size = New System.Drawing.Size(271, 72)
         Me.btnMuestraBase.TabIndex = 17
-        Me.btnMuestraBase.Text = "Base a descargar"
+        Me.btnMuestraBase.Text = "Detalle de base"
         Me.btnMuestraBase.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnMuestraBase.UseVisualStyleBackColor = True
         '
