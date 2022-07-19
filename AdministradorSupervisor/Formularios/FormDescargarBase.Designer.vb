@@ -22,10 +22,12 @@ Partial Class FormDescargarBase
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDescargarBase))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbPeriodo = New System.Windows.Forms.ComboBox()
         Me.dtgMuestraBase = New System.Windows.Forms.DataGridView()
         Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnExportar = New System.Windows.Forms.Button()
         CType(Me.dtgMuestraBase, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,7 +37,7 @@ Partial Class FormDescargarBase
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(51, 38)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(295, 29)
+        Me.Label1.Size = New System.Drawing.Size(229, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Elija periodo a descargar :"
         '
@@ -55,7 +57,7 @@ Partial Class FormDescargarBase
         Me.dtgMuestraBase.Location = New System.Drawing.Point(44, 93)
         Me.dtgMuestraBase.Name = "dtgMuestraBase"
         Me.dtgMuestraBase.RowHeadersWidth = 51
-        Me.dtgMuestraBase.Size = New System.Drawing.Size(1239, 343)
+        Me.dtgMuestraBase.Size = New System.Drawing.Size(1239, 320)
         Me.dtgMuestraBase.TabIndex = 2
         '
         'btnBuscar
@@ -67,11 +69,21 @@ Partial Class FormDescargarBase
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
+        'btnExportar
+        '
+        Me.btnExportar.Image = CType(resources.GetObject("btnExportar.Image"), System.Drawing.Image)
+        Me.btnExportar.Location = New System.Drawing.Point(445, 419)
+        Me.btnExportar.Name = "btnExportar"
+        Me.btnExportar.Size = New System.Drawing.Size(118, 53)
+        Me.btnExportar.TabIndex = 4
+        Me.btnExportar.UseVisualStyleBackColor = True
+        '
         'FormDescargarBase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1334, 484)
+        Me.Controls.Add(Me.btnExportar)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.dtgMuestraBase)
         Me.Controls.Add(Me.cmbPeriodo)
@@ -89,4 +101,5 @@ Partial Class FormDescargarBase
     Friend WithEvents cmbPeriodo As ComboBox
     Friend WithEvents dtgMuestraBase As DataGridView
     Friend WithEvents btnBuscar As Button
+    Friend WithEvents btnExportar As Button
 End Class
