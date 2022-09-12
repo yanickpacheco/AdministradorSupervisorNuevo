@@ -32,6 +32,7 @@ Partial Class FormMenu
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbListaCampaña = New System.Windows.Forms.ComboBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,7 +55,7 @@ Partial Class FormMenu
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.Image = Global.AdministradorSupervisor.My.Resources.Resources.salir_v2
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSalir.Location = New System.Drawing.Point(502, 436)
+        Me.btnSalir.Location = New System.Drawing.Point(517, 488)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(76, 89)
         Me.btnSalir.TabIndex = 3
@@ -92,7 +93,6 @@ Partial Class FormMenu
         '
         Me.btnReferidos.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReferidos.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnReferidos.Image = CType(resources.GetObject("btnReferidos.Image"), System.Drawing.Image)
         Me.btnReferidos.ImageAlign = System.Drawing.ContentAlignment.BottomRight
         Me.btnReferidos.Location = New System.Drawing.Point(315, 310)
         Me.btnReferidos.Name = "btnReferidos"
@@ -122,7 +122,7 @@ Partial Class FormMenu
         Me.Button2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.Button2.Location = New System.Drawing.Point(147, 398)
+        Me.Button2.Location = New System.Drawing.Point(23, 400)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(278, 69)
         Me.Button2.TabIndex = 7
@@ -152,12 +152,26 @@ Partial Class FormMenu
         Me.cmbListaCampaña.Size = New System.Drawing.Size(407, 24)
         Me.cmbListaCampaña.TabIndex = 8
         '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.Button3.Location = New System.Drawing.Point(315, 400)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(278, 69)
+        Me.Button3.TabIndex = 10
+        Me.Button3.Text = "Solicitud a Soporte"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(626, 551)
+        Me.ClientSize = New System.Drawing.Size(626, 594)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmbListaCampaña)
         Me.Controls.Add(Me.Button2)
@@ -185,4 +199,5 @@ Partial Class FormMenu
     Friend WithEvents Button2 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents cmbListaCampaña As ComboBox
+    Friend WithEvents Button3 As Button
 End Class
