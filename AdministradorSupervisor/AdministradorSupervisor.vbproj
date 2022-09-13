@@ -168,6 +168,12 @@
     <Compile Include="Formularios\frmHistorialLlamado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\frmIngresoSolicitud.Designer.vb">
+      <DependentUpon>frmIngresoSolicitud.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmIngresoSolicitud.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmLiberaTerminados.designer.vb">
       <DependentUpon>FrmLiberaTerminados.vb</DependentUpon>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmHistorialLlamado.resx">
       <DependentUpon>frmHistorialLlamado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmIngresoSolicitud.resx">
+      <DependentUpon>frmIngresoSolicitud.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLiberaTerminados.resx">
       <DependentUpon>FrmLiberaTerminados.vb</DependentUpon>

@@ -110,4 +110,8 @@ Public Class FormMenu
 
         idCrm = cmbListaCampaña.SelectedValue
     End Sub
+
+    Private Sub btnSoporte_Click(sender As Object, e As EventArgs) Handles btnSoporte.Click
+        frmIngresoSolicitud.ShowDialog()
+    End Sub
 End Class
