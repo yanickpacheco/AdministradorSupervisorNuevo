@@ -184,7 +184,7 @@ Partial Class frmIngresoSolicitud
         Me.cmbPiso.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbPiso.ForeColor = System.Drawing.SystemColors.Highlight
         Me.cmbPiso.FormattingEnabled = True
-        Me.cmbPiso.Items.AddRange(New Object() {"[Seleccione]", "PISO 5", "PISO 7"})
+        Me.cmbPiso.Items.AddRange(New Object() {"[Seleccione]", "PISO 1", "PISO 5"})
         Me.cmbPiso.Location = New System.Drawing.Point(289, 103)
         Me.cmbPiso.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbPiso.Name = "cmbPiso"
@@ -302,6 +302,7 @@ Partial Class frmIngresoSolicitud
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmIngresoSolicitud"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmIngresoSolicitud"
         Me.ResumeLayout(False)
         Me.PerformLayout()

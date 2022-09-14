@@ -277,4 +277,99 @@ Public Class frmIngresoSolicitud
             txtCantidad.Text = ""
         End If
     End Sub
+
+    Public Function enviarCorreo(ByVal pais As String) As Boolean
+        Dim smtp As New System.Net.Mail.SmtpClient
+        Dim correo As New System.Net.Mail.MailMessage
+
+        Dim entCorreo As New eCorreo()
+        Dim correoDA As New daCorreo()
+
+        'If pais = "VENEZUELA" Then
+        entCorreo = correoDA.datosCorreo(7)
+        'Else
+        '    entCorreo = correoDA.datosCorreo(6)
+        'End If
+
+        'Dim cnn As New SqlConnection("data source = 192.168.1.14; initial catalog = CALIDAD; User Id= cp; Password=Cordial.passs")
+        'Dim miTabla As New DataTable
+        'Dim dA As SqlDataAdapter
+        'Dim cmd As New SqlCommand
+        'Dim sql As String = ""
+        'cmd.CommandType = CommandType.StoredProcedure
+        'Try
+        '    sql = "[Entidad].[pa_ListaEvaluadorEncuesta]"
+        '    cmd.CommandText = sql
+        '    cmd.Connection = cnn
+        '    dA = New SqlDataAdapter(cmd)
+        '    dA.Fill(miTabla)
+
+        'Catch ex As Exception
+        '    Exit Try
+        'End Try
+
+        'Dim nombreEvaluador As String = ""
+        'For Each data As DataRow In miTabla.Rows
+        '    If data.Item("idEvaluador").ToString() = idEvaluador Then
+        '        nombreEvaluador = data.Item("NombreEvaluador").ToString()
+        '        Exit For
+        '    End If
+        'Next
+
+        'Dim asunto As String = entCorreo.asunto
+        'asunto = asunto.Replace("[NombreEjecutivo]", cmbNombreEjecutivo.Text)
+        'asunto = asunto.Replace("[Id]", txtId.Text)
+
+        'Dim cuerpo As String = entCorreo.Cuerpo
+        'cuerpo = cuerpo.Replace("[CRM]", cmbCRM.Text)
+        'cuerpo = cuerpo.Replace("[NombreEjecutivo]", cmbNombreEjecutivo.Text)
+        'cuerpo = cuerpo.Replace("[Id]", txtId.Text)
+        'cuerpo = cuerpo.Replace("[Telefono]", txtTelefono.Text)
+        'cuerpo = cuerpo.Replace("[Estado]", cmbEstado.Text)
+        'cuerpo = cuerpo.Replace("[NotaFinal]", txtNotaFinal.Text)
+        'cuerpo = cuerpo.Replace("[Evaluador]", nombreEvaluador.ToString())
+        'cuerpo = cuerpo.Replace("[Observaciones]", obs)
+        'cuerpo = cuerpo.Replace("[Pais]", pais)
+
+        With smtp
+            .Port = entCorreo.puerto
+            .Host = entCorreo.host
+            .Credentials = New System.Net.NetworkCredential(entCorreo.usuarioCorreo, entCorreo.contraseñaCorreo)
+            .EnableSsl = entCorreo.ValorSSL
+        End With
+
+        With correo
+            .From = New System.Net.Mail.MailAddress(entCorreo.direccionCorreo)
+            Dim listaDestinatarios = entCorreo.para.Split(";")
+            For Each item As String In listaDestinatarios
+                .To.Add(item)
+            Next
+
+            Dim listaConCopia = entCorreo.conCopia.Split(";")
+            If listaConCopia(0) <> "" Then
+                For Each item As String In listaConCopia
+                    .CC.Add(item)
+                Next
+            End If
+            '.Subject = IIf(chkGrave.Checked, "GRAVE ", "") + asunto
+            '.Body = cuerpo
+            .IsBodyHtml = True
+            'If chkGrave.Checked Then
+            '    .Priority = System.Net.Mail.MailPriority.High
+            'Else
+            '    .Priority = System.Net.Mail.MailPriority.Normal
+            'End If
+        End With
+
+        Try
+            smtp.Send(correo)
+            MessageBox.Show("Se ha enviado correo para entrega de Insumos",
+                                "Correo enviado",
+                                 MessageBoxButtons.OK)
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
 End Class

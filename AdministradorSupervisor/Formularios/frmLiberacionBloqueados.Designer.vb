@@ -50,18 +50,20 @@ Partial Class frmLiberacionBloqueados
         '
         Me.cmbTipoBloqueo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbTipoBloqueo.FormattingEnabled = True
-        Me.cmbTipoBloqueo.Location = New System.Drawing.Point(118, 34)
+        Me.cmbTipoBloqueo.Location = New System.Drawing.Point(157, 42)
+        Me.cmbTipoBloqueo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbTipoBloqueo.Name = "cmbTipoBloqueo"
-        Me.cmbTipoBloqueo.Size = New System.Drawing.Size(332, 21)
+        Me.cmbTipoBloqueo.Size = New System.Drawing.Size(648, 24)
         Me.cmbTipoBloqueo.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 35)
+        Me.Label1.Location = New System.Drawing.Point(16, 43)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 16)
+        Me.Label1.Size = New System.Drawing.Size(122, 20)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Marca Bloqueo"
         '
@@ -72,64 +74,73 @@ Partial Class frmLiberacionBloqueados
         Me.dtgRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.dtgRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgRegistros.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.chkSeleccionar, Me.Id, Me.Nombre, Me.Comuna, Me.Periodo, Me.Estado})
-        Me.dtgRegistros.Location = New System.Drawing.Point(12, 152)
+        Me.dtgRegistros.Location = New System.Drawing.Point(16, 187)
+        Me.dtgRegistros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtgRegistros.Name = "dtgRegistros"
         Me.dtgRegistros.RowHeadersVisible = False
-        Me.dtgRegistros.Size = New System.Drawing.Size(745, 319)
+        Me.dtgRegistros.RowHeadersWidth = 51
+        Me.dtgRegistros.Size = New System.Drawing.Size(993, 393)
         Me.dtgRegistros.TabIndex = 2
         '
         'chkSeleccionar
         '
         Me.chkSeleccionar.HeaderText = "Seleccionar"
+        Me.chkSeleccionar.MinimumWidth = 6
         Me.chkSeleccionar.Name = "chkSeleccionar"
-        Me.chkSeleccionar.Width = 69
+        Me.chkSeleccionar.Width = 88
         '
         'Id
         '
         Me.Id.DataPropertyName = "ID"
         Me.Id.HeaderText = "Id"
+        Me.Id.MinimumWidth = 6
         Me.Id.Name = "Id"
         Me.Id.ReadOnly = True
-        Me.Id.Width = 41
+        Me.Id.Width = 48
         '
         'Nombre
         '
         Me.Nombre.DataPropertyName = "NOMBRE"
         Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.MinimumWidth = 6
         Me.Nombre.Name = "Nombre"
         Me.Nombre.ReadOnly = True
-        Me.Nombre.Width = 69
+        Me.Nombre.Width = 87
         '
         'Comuna
         '
         Me.Comuna.DataPropertyName = "COMUNA"
         Me.Comuna.HeaderText = "Comuna"
+        Me.Comuna.MinimumWidth = 6
         Me.Comuna.Name = "Comuna"
         Me.Comuna.ReadOnly = True
-        Me.Comuna.Width = 71
+        Me.Comuna.Width = 89
         '
         'Periodo
         '
         Me.Periodo.DataPropertyName = "PERIODO"
         Me.Periodo.HeaderText = "Periodo"
+        Me.Periodo.MinimumWidth = 6
         Me.Periodo.Name = "Periodo"
         Me.Periodo.ReadOnly = True
-        Me.Periodo.Width = 68
+        Me.Periodo.Width = 86
         '
         'Estado
         '
         Me.Estado.DataPropertyName = "ESTADO"
         Me.Estado.HeaderText = "Estado"
+        Me.Estado.MinimumWidth = 6
         Me.Estado.Name = "Estado"
         Me.Estado.ReadOnly = True
-        Me.Estado.Width = 65
+        Me.Estado.Width = 81
         '
         'btnLiberar
         '
         Me.btnLiberar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLiberar.Location = New System.Drawing.Point(335, 495)
+        Me.btnLiberar.Location = New System.Drawing.Point(447, 609)
+        Me.btnLiberar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnLiberar.Name = "btnLiberar"
-        Me.btnLiberar.Size = New System.Drawing.Size(220, 45)
+        Me.btnLiberar.Size = New System.Drawing.Size(293, 55)
         Me.btnLiberar.TabIndex = 5
         Me.btnLiberar.Text = "Liberar Registros"
         Me.btnLiberar.UseVisualStyleBackColor = True
@@ -137,9 +148,10 @@ Partial Class frmLiberacionBloqueados
         'btnListar
         '
         Me.btnListar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnListar.Location = New System.Drawing.Point(472, 28)
+        Me.btnListar.Location = New System.Drawing.Point(831, 33)
+        Me.btnListar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnListar.Name = "btnListar"
-        Me.btnListar.Size = New System.Drawing.Size(83, 32)
+        Me.btnListar.Size = New System.Drawing.Size(111, 39)
         Me.btnListar.TabIndex = 7
         Me.btnListar.Text = "Listar"
         Me.btnListar.UseVisualStyleBackColor = True
@@ -148,36 +160,40 @@ Partial Class frmLiberacionBloqueados
         '
         Me.chkSeleccionarTodos.AutoSize = True
         Me.chkSeleccionarTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkSeleccionarTodos.Location = New System.Drawing.Point(12, 123)
+        Me.chkSeleccionarTodos.Location = New System.Drawing.Point(16, 151)
+        Me.chkSeleccionarTodos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkSeleccionarTodos.Name = "chkSeleccionarTodos"
-        Me.chkSeleccionarTodos.Size = New System.Drawing.Size(142, 20)
+        Me.chkSeleccionarTodos.Size = New System.Drawing.Size(170, 24)
         Me.chkSeleccionarTodos.TabIndex = 8
         Me.chkSeleccionarTodos.Text = "Seleccionar Todos"
         Me.chkSeleccionarTodos.UseVisualStyleBackColor = True
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(369, 123)
+        Me.txtCantidad.Location = New System.Drawing.Point(492, 151)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(41, 20)
+        Me.txtCantidad.Size = New System.Drawing.Size(53, 22)
         Me.txtCantidad.TabIndex = 9
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(220, 124)
+        Me.Label3.Location = New System.Drawing.Point(293, 153)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(143, 16)
+        Me.Label3.Size = New System.Drawing.Size(178, 20)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Seleccionar Cantidad: "
         '
         'btnMarcar
         '
         Me.btnMarcar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMarcar.Location = New System.Drawing.Point(416, 122)
+        Me.btnMarcar.Location = New System.Drawing.Point(555, 150)
+        Me.btnMarcar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMarcar.Name = "btnMarcar"
-        Me.btnMarcar.Size = New System.Drawing.Size(115, 23)
+        Me.btnMarcar.Size = New System.Drawing.Size(153, 28)
         Me.btnMarcar.TabIndex = 11
         Me.btnMarcar.Text = "Marcar cantidad"
         Me.btnMarcar.UseVisualStyleBackColor = True
@@ -185,16 +201,18 @@ Partial Class frmLiberacionBloqueados
         'lblTotal
         '
         Me.lblTotal.AutoSize = True
-        Me.lblTotal.Location = New System.Drawing.Point(587, 127)
+        Me.lblTotal.Location = New System.Drawing.Point(783, 156)
+        Me.lblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(0, 13)
+        Me.lblTotal.Size = New System.Drawing.Size(0, 17)
         Me.lblTotal.TabIndex = 12
         '
         'btnVolver
         '
-        Me.btnVolver.Location = New System.Drawing.Point(888, 538)
+        Me.btnVolver.Location = New System.Drawing.Point(1184, 662)
+        Me.btnVolver.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVolver.Name = "btnVolver"
-        Me.btnVolver.Size = New System.Drawing.Size(86, 33)
+        Me.btnVolver.Size = New System.Drawing.Size(115, 41)
         Me.btnVolver.TabIndex = 14
         Me.btnVolver.Text = "Volver"
         Me.btnVolver.UseVisualStyleBackColor = True
@@ -203,9 +221,10 @@ Partial Class frmLiberacionBloqueados
         '
         Me.chkEjecutivos.AutoSize = True
         Me.chkEjecutivos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkEjecutivos.Location = New System.Drawing.Point(779, 124)
+        Me.chkEjecutivos.Location = New System.Drawing.Point(1039, 153)
+        Me.chkEjecutivos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkEjecutivos.Name = "chkEjecutivos"
-        Me.chkEjecutivos.Size = New System.Drawing.Size(164, 20)
+        Me.chkEjecutivos.Size = New System.Drawing.Size(201, 24)
         Me.chkEjecutivos.TabIndex = 16
         Me.chkEjecutivos.Text = "Seleccionar Ejecutivos"
         Me.chkEjecutivos.UseVisualStyleBackColor = True
@@ -214,9 +233,10 @@ Partial Class frmLiberacionBloqueados
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Indigo
-        Me.Label2.Location = New System.Drawing.Point(766, 36)
+        Me.Label2.Location = New System.Drawing.Point(1021, 44)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(208, 71)
+        Me.Label2.Size = New System.Drawing.Size(277, 87)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "* Registros quedan liberados a plataforma. Puede asignar a ejecutivos en la lista" &
     " inferior"
@@ -224,9 +244,10 @@ Partial Class frmLiberacionBloqueados
         'chkListEjecutivos
         '
         Me.chkListEjecutivos.FormattingEnabled = True
-        Me.chkListEjecutivos.Location = New System.Drawing.Point(779, 152)
+        Me.chkListEjecutivos.Location = New System.Drawing.Point(1039, 187)
+        Me.chkListEjecutivos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkListEjecutivos.Name = "chkListEjecutivos"
-        Me.chkListEjecutivos.Size = New System.Drawing.Size(176, 319)
+        Me.chkListEjecutivos.Size = New System.Drawing.Size(233, 378)
         Me.chkListEjecutivos.TabIndex = 18
         Me.chkListEjecutivos.Visible = False
         '
@@ -234,16 +255,17 @@ Partial Class frmLiberacionBloqueados
         '
         Me.lblTotalRegistros.AutoSize = True
         Me.lblTotalRegistros.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalRegistros.Location = New System.Drawing.Point(604, 127)
+        Me.lblTotalRegistros.Location = New System.Drawing.Point(805, 156)
+        Me.lblTotalRegistros.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotalRegistros.Name = "lblTotalRegistros"
-        Me.lblTotalRegistros.Size = New System.Drawing.Size(0, 15)
+        Me.lblTotalRegistros.Size = New System.Drawing.Size(0, 18)
         Me.lblTotalRegistros.TabIndex = 19
         '
         'frmLiberacionBloqueados
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(986, 583)
+        Me.ClientSize = New System.Drawing.Size(1315, 718)
         Me.Controls.Add(Me.lblTotalRegistros)
         Me.Controls.Add(Me.chkListEjecutivos)
         Me.Controls.Add(Me.Label2)
@@ -259,6 +281,7 @@ Partial Class frmLiberacionBloqueados
         Me.Controls.Add(Me.dtgRegistros)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmbTipoBloqueo)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmLiberacionBloqueados"
         CType(Me.dtgRegistros, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
