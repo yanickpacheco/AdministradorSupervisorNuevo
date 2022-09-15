@@ -174,7 +174,6 @@ Partial Class FormMenu
         Me.btnSoporte.Text = "Solicitud a Soporte"
         Me.btnSoporte.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnSoporte.UseVisualStyleBackColor = True
-        Me.btnSoporte.Visible = False
         '
         'FormMenu
         '

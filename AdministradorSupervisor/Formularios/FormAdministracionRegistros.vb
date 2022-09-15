@@ -26,7 +26,7 @@ Public Class FormAdministracionRegistros
             Case "PABLO CASTILLO", "MAURICIO GOMEZ", "SUSANA COLLAO", "YANETT MUÑOZ", "MATIAS CARRERA", "PAULA ARAOS", "ANA RODRIGUEZ", "CRISTIAN ANACONA", "DAMARIS MARIN", "ROSSINI VALDIVIA", "FELIPE DIAZ"
                 btnRecicladoBase.Visible = True
                 btnLiberarBloqueados.Visible = True
-                If nombreSupervisor = "YANETT MUÑOZ" Or nombreSupervisor = "PAULA ARAOS" Or nombreSupervisor = "ROSSINI VALDIVIA" Then
+                If nombreSupervisor = "YANETT MUÑOZ" Or nombreSupervisor = "PAULA ARAOS" Or nombreSupervisor = "ROSSINI VALDIVIA" Or nombreSupervisor = "DAMARIS MARIN" Then
                     btnMandato.Visible = True
                 End If
             Case Else

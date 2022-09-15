@@ -107,7 +107,10 @@
     <Compile Include="DA\daCorreo.vb" />
     <Compile Include="Entidades\clsBitacora.vb" />
     <Compile Include="Entidades\clsEjecutivo.vb" />
+    <Compile Include="Entidades\eCampaña.vb" />
     <Compile Include="Entidades\eCorreo.vb" />
+    <Compile Include="Entidades\eEncargado.vb" />
+    <Compile Include="Entidades\eUsuarios.vb" />
     <Compile Include="Entidades\IDList.vb" />
     <Compile Include="Formularios\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -194,6 +197,7 @@
     <Compile Include="Formularios\frmLiberacionBloqueados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Funciones\clsFunciones.vb" />
     <Compile Include="ModuloGeneral.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

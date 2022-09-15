@@ -5,6 +5,7 @@ Module ModuloGeneral
     Public idCrm As Integer
     Public nombreSupervisor As String
     Public idSupervisor As Int32
+    Public vgListUsuarios As New List(Of eUsuarios)
 
     Dim cnn As New SqlConnection("data source = 192.168.1.14; initial catalog = BASE_GENERAL_CORDIAL; User id= cp; password=Cordial.passs ")
     ' Public usuario As String

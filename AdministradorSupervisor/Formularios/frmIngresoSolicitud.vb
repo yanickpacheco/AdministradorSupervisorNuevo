@@ -2,7 +2,11 @@
 
 Public Class frmIngresoSolicitud
 
+    Dim funciones As New clsFunciones
+    Dim tablaSolicitudes As New DataTable
+
     Dim cnn As New SqlConnection("data source = 192.168.1.14; initial catalog = SOPORTE; User Id= cp; Password=Cordial.passs")
+    Dim cnnn As New SqlConnection("data source = 192.168.1.14; initial catalog = BASE_GENERAL_CORDIAL; User Id= cp; Password=Cordial.passs")
 
 
     Private Sub limpiacampos()
@@ -105,6 +109,34 @@ Public Class frmIngresoSolicitud
         End Try
     End Sub
 
+
+    Private Sub ListaUsuarios(ByVal combo As ComboBox)
+
+        Dim mitabla As New DataTable
+        Dim DA As SqlDataAdapter
+        Dim cmd As New SqlCommand
+        Dim Simbolo As String = ""
+        Dim sql As String = ""
+        cmd.CommandType = CommandType.StoredProcedure
+        Try
+            sql = "dbo.Muestra_usuarios_genral"
+
+            cmd.CommandText = sql
+            cmd.Connection = cnnn
+            DA = New SqlDataAdapter(cmd)
+            DA.Fill(mitabla)
+
+
+            combo.DataSource = mitabla
+            combo.DisplayMember = "Usuario"
+            'combo.ValueMember = "idNeotel"
+            combo.SelectedIndex = -1
+
+        Catch ex As Exception
+            MsgBox("Error Listar Usuarios" & vbNewLine & ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
     Private Sub ListaSolicitante(ByVal combo As ComboBox)
 
         Dim mitabla As New DataTable
@@ -137,6 +169,7 @@ Public Class frmIngresoSolicitud
         If validaCampos() = True Then
             IngresaSolicitud(cmbPiso.Text, cmbTipoSolicitud.SelectedValue, cmbPlataforma.SelectedValue, cmbSolicitante.SelectedValue, txtObs.Text, IIf(cmbInsumo.SelectedValue Is Nothing, 0, cmbInsumo.SelectedValue), txtCantidad.Text)
             limpiacampos()
+            enviarCorreo()
         End If
 
     End Sub
@@ -244,10 +277,14 @@ Public Class frmIngresoSolicitud
 
     Private Sub frmIngresoSolicitud_Load(sender As Object, e As EventArgs) Handles Me.Load
         limpiacampos()
+        'listaEjecutivos()
+        ListaUsuarios(cmbListaEjecutivos)
         ListaTipoSolicitud(cmbTipoSolicitud)
         ListaTipoPlataforma(cmbPlataforma)
         ListaSolicitante(cmbSolicitante)
         ListaInsumos(cmbInsumo)
+        dtgListaSolicitudes.DataSource = tablaSolicitudes
+        'llenarDatos()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -278,7 +315,17 @@ Public Class frmIngresoSolicitud
         End If
     End Sub
 
-    Public Function enviarCorreo(ByVal pais As String) As Boolean
+    'Private Function listaEjecutivos() As List(Of eEncargado)
+    '    funciones.llenaComboBox(cmbNombreEjecutivo, "nombre", "Usuario", vgListUsuarios.ToArray)
+    'End Function
+
+    'Private Sub llenarDatos()
+    '    Dim usuario As New eUsuarios
+    '    usuario = vgListUsuarios.Find(Function(tmpc As eUsuarios) tmpc.Usuario = dtgListaSolicitudes.Rows(0).Cells("Ejecutivo").Value)
+    '    cmbNombreEjecutivo.SelectedValue = usuario.Usuario
+    'End Sub
+
+    Public Function enviarCorreo() As Boolean
         Dim smtp As New System.Net.Mail.SmtpClient
         Dim correo As New System.Net.Mail.MailMessage
 
@@ -286,7 +333,7 @@ Public Class frmIngresoSolicitud
         Dim correoDA As New daCorreo()
 
         'If pais = "VENEZUELA" Then
-        entCorreo = correoDA.datosCorreo(7)
+        entCorreo = correoDA.datosCorreo(48)
         'Else
         '    entCorreo = correoDA.datosCorreo(6)
         'End If
@@ -316,16 +363,16 @@ Public Class frmIngresoSolicitud
         '    End If
         'Next
 
-        'Dim asunto As String = entCorreo.asunto
-        'asunto = asunto.Replace("[NombreEjecutivo]", cmbNombreEjecutivo.Text)
+        Dim asunto As String = entCorreo.asunto
+        asunto = asunto.Replace("[Supervisor]", cmbSolicitante.Text)
         'asunto = asunto.Replace("[Id]", txtId.Text)
 
-        'Dim cuerpo As String = entCorreo.Cuerpo
-        'cuerpo = cuerpo.Replace("[CRM]", cmbCRM.Text)
-        'cuerpo = cuerpo.Replace("[NombreEjecutivo]", cmbNombreEjecutivo.Text)
-        'cuerpo = cuerpo.Replace("[Id]", txtId.Text)
-        'cuerpo = cuerpo.Replace("[Telefono]", txtTelefono.Text)
-        'cuerpo = cuerpo.Replace("[Estado]", cmbEstado.Text)
+        Dim cuerpo As String = entCorreo.Cuerpo
+        cuerpo = cuerpo.Replace("[Insumo]", cmbInsumo.Text)
+        cuerpo = cuerpo.Replace("[Cantidad]", txtCantidad.Text)
+        cuerpo = cuerpo.Replace("[Piso]", cmbPiso.Text)
+        cuerpo = cuerpo.Replace("[Supervisor]", cmbSolicitante.Text)
+        cuerpo = cuerpo.Replace("[Observacion]", txtObs.Text)
         'cuerpo = cuerpo.Replace("[NotaFinal]", txtNotaFinal.Text)
         'cuerpo = cuerpo.Replace("[Evaluador]", nombreEvaluador.ToString())
         'cuerpo = cuerpo.Replace("[Observaciones]", obs)
@@ -351,8 +398,8 @@ Public Class frmIngresoSolicitud
                     .CC.Add(item)
                 Next
             End If
-            '.Subject = IIf(chkGrave.Checked, "GRAVE ", "") + asunto
-            '.Body = cuerpo
+            .Subject = asunto
+            .Body = cuerpo
             .IsBodyHtml = True
             'If chkGrave.Checked Then
             '    .Priority = System.Net.Mail.MailPriority.High
