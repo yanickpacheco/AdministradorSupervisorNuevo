@@ -41,7 +41,7 @@ Partial Class frmIngresoSolicitud
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblEjecutivo = New System.Windows.Forms.Label()
         Me.cmbNombreEjecutivo = New System.Windows.Forms.ComboBox()
         Me.dtgListaSolicitudes = New System.Windows.Forms.DataGridView()
         Me.IdAsignacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -201,7 +201,7 @@ Partial Class frmIngresoSolicitud
         Me.cmbPiso.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbPiso.ForeColor = System.Drawing.SystemColors.Highlight
         Me.cmbPiso.FormattingEnabled = True
-        Me.cmbPiso.Items.AddRange(New Object() {"[Seleccione]", "PISO 1", "PISO 5"})
+        Me.cmbPiso.Items.AddRange(New Object() {"[Seleccione]", "PISO 1", "PISO 5", "TELETRABAJO"})
         Me.cmbPiso.Location = New System.Drawing.Point(289, 74)
         Me.cmbPiso.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbPiso.Name = "cmbPiso"
@@ -293,17 +293,18 @@ Partial Class frmIngresoSolicitud
         Me.Label8.TabIndex = 21
         Me.Label8.Text = "Solicitud Insumos"
         '
-        'Label1
+        'lblEjecutivo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label1.Location = New System.Drawing.Point(152, 297)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 20)
-        Me.Label1.TabIndex = 40
-        Me.Label1.Text = "Ejecutivo:"
+        Me.lblEjecutivo.AutoSize = True
+        Me.lblEjecutivo.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEjecutivo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.lblEjecutivo.Location = New System.Drawing.Point(152, 297)
+        Me.lblEjecutivo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblEjecutivo.Name = "lblEjecutivo"
+        Me.lblEjecutivo.Size = New System.Drawing.Size(78, 20)
+        Me.lblEjecutivo.TabIndex = 40
+        Me.lblEjecutivo.Text = "Ejecutivo:"
+        Me.lblEjecutivo.Visible = False
         '
         'cmbNombreEjecutivo
         '
@@ -582,6 +583,7 @@ Partial Class frmIngresoSolicitud
         Me.cmbListaEjecutivos.Name = "cmbListaEjecutivos"
         Me.cmbListaEjecutivos.Size = New System.Drawing.Size(366, 24)
         Me.cmbListaEjecutivos.TabIndex = 43
+        Me.cmbListaEjecutivos.Visible = False
         '
         'frmIngresoSolicitud
         '
@@ -591,7 +593,7 @@ Partial Class frmIngresoSolicitud
         Me.Controls.Add(Me.cmbListaEjecutivos)
         Me.Controls.Add(Me.dtgListaSolicitudes)
         Me.Controls.Add(Me.cmbNombreEjecutivo)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblEjecutivo)
         Me.Controls.Add(Me.lblCantidad)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.cmbInsumo)
@@ -638,7 +640,7 @@ Partial Class frmIngresoSolicitud
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblEjecutivo As Label
     Friend WithEvents cmbNombreEjecutivo As ComboBox
     Friend WithEvents dtgListaSolicitudes As DataGridView
     Friend WithEvents IdAsignacion As DataGridViewTextBoxColumn

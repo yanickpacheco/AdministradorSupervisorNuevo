@@ -419,4 +419,14 @@ Public Class frmIngresoSolicitud
         End Try
 
     End Function
+
+    Private Sub cmbPiso_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPiso.SelectedIndexChanged
+        If cmbPiso.Text = "TELETRABAJO" Then
+            lblEjecutivo.Visible = True
+            cmbListaEjecutivos.Visible = True
+        Else
+            lblEjecutivo.Visible = False
+            cmbListaEjecutivos.Visible = False
+        End If
+    End Sub
 End Class
